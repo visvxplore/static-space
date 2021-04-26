@@ -10,25 +10,48 @@
     <style>
         body {
             margin: 0;
-            text-align: center;
             font-family: 'Trebuchet MS', 'Times New Roman', 'Verdana', sans-serif;
-            background-color: #290128;
+            background: #6190E8;
+            background: linear-gradient(to right, #A7BFE8, #6190E8);
             background-repeat: no-repeat;
             color: #ffffff;
             min-height: 100vh;
         }
 
-        .flow {
-            padding: 4rem;
-            height: inherit;
+        .parent-flow {
+            max-width: 100rem;
+            margin: 0px auto;
+            outline: 1px solid white;
+            min-height: 100vh;
+            display: flex;
+            overflow-x: hidden;
         }
 
-        a {
-            color: white;
+        .flow {
+            padding: 4rem;
+            min-width: calc(100% - 8rem);
+            height: auto;
         }
+
+        /* a {
+            color: white;
+        } */
 
         img {
             max-width: 100%;
+        }
+
+        .work-block {
+            color: #000000;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 40px 0px rgba(14, 30, 37, 0.16);
+            padding: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .work-block h3 {
+            margin-top: 0;
         }
 
         @media screen and (max-width: 767px) {
@@ -38,19 +61,43 @@
             }
 
         }
+
+        @media screen and (max-width: 1023px) {
+
+            .parent-flow {
+                flex-wrap: wrap;
+            }
+
+        }
+
+        @media screen and (min-width: 1024px) {
+
+            .flow {
+                min-width: 38%;
+            }
+
+        }
     </style>
 </head>
 
 <body>
-    <div class="flow">
-        <h1>I'm just floating here</h1>
-        <p><a href="https://dev.visv.space">See my developer portfolio</a></p>
-        <figure>
-            <img src="./giphy.webp" alt="Astronaut in space gif">
-            <figcaption>
-                <small>Gif by <a href="https://dribbble.com/TomasBrunsdon">TomasBrunsdon</a></small>
-            </figcaption>
-        </figure>
+    <div class="parent-flow">
+        <div class="flow">
+            <h1>VISV.SPACE</h1>
+            <h2>Myself Viswa Sai,
+            </h2>
+            <h2>I am like any other person sharing opinions on internet
+            </h2>
+            <h2>Here in my site, you can find links, that showcase various fields I explore</h2>
+
+        </div>
+        <div class="flow">
+            <div class="work-block">
+                <h3>Developer Portfolio</h3>
+                <p>I work as web developer out of passion and for living.</p>
+                <p><a href="https://dev.visv.space" target="_blank">See my developer portfolio</a></p>
+            </div>
+        </div>
     </div>
 </body>
 
